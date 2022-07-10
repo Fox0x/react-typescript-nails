@@ -1,0 +1,24 @@
+.createVisit__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 100vw;
+	height: 100vh;
+	background-color: #f8f8f8;
+	margin: 0;
+}
+
+.steps {
+	padding: 2rem;
+	width: 100vw;
+	height: 20vh;
+}
+
+.content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 80vh;
+}

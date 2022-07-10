@@ -1,7 +1,13 @@
-import React from 'react';
+import { FC } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { CreateVisitPage } from "./Pages/CreateVisitPage/CreateVisitPage";
 
-function App() {
-	return <div className="App">Hello World</div>;
-}
-
-export default App;
+export const App: FC = () => {
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<CreateVisitPage />} />
+			</Routes>
+		</BrowserRouter>
+	);
+};

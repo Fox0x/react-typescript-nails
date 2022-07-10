@@ -1,0 +1,30 @@
+.calendar__wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.calendar__dropdown {
+	transform: scale(1.5) translateY(-10%);
+}
+
+.timePicker {
+	width: 50vw;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	transition: all 0.5s ease;
+}
+
+.timePicker__hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.datePicker {
+	width: 50vw;
+	align-self: flex-end;
+	display: flex;
+	justify-content: center;
+}

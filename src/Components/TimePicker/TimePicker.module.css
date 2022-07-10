@@ -1,0 +1,72 @@
+.timePicker__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 80vh;
+	opacity: 1;
+	pointer-events: all;
+	transition: all 0.3s ease-in-out;
+}
+
+.timePicker__wrapper span {
+	font-size: 1.5rem;
+	color: #5a6c70;
+}
+
+.timeList__wrapper {
+	width: 40vw;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.timePickerTile {
+	font-size: 1.5rem;
+	color: #5a6c70;
+	border: 2px solid #fdb1aa;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10%;
+	background-color: #f8f8f8;
+	cursor: pointer;
+	box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+		0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+	width: 4.5rem;
+	height: 3rem;
+	margin: 1rem;
+	transition: all 0.3s ease-in-out;
+}
+
+.timePickerTile:hover {
+	background-color: #fdb1aa;
+	color: #f8f8f8;
+	transform: scale(1.1);
+}
+
+.timePickerTile__unavailable {
+	box-shadow: none;
+	border: 2px solid #5a6c714d;
+	color: #5a6c714d;
+	pointer-events: none;
+}
+
+.timePickerTile__unavailable:hover {
+	background-color: #f8f8f8;
+	transform: scale(1);
+	border: 2px solid #5b6d714d;
+	color: #5a6c714d;
+}
+
+.clicked {
+	background-color: #fdb1aa;
+	color: #f8f8f8;
+	box-shadow: none;
+	border: 2px solid #5a6c70;
+}
+
+.hidden {
+	opacity: 0;
+	pointer-events: none;
+}
