@@ -8,6 +8,9 @@ import {
 	signInWithPhone,
 	verifyOTP,
 } from "../../Controllers/FirebaseController";
+import { FirebaseError } from "firebase/app";
+import { error } from "console";
+import { getErrorMessage } from "../../utils/errorHandling";
 
 interface LoginFormProps {
 	setStep: (step: number) => void;
@@ -63,9 +66,7 @@ export const LoginForm: FC<LoginFormProps> = ({ setStep }) => {
 					);
 					setStep(1);
 				})
-				.catch((err: string): void => {
-					console.log(err);
-				});
+				.catch((error: FirebaseError): void => {});
 		},
 	});
 
@@ -80,8 +81,8 @@ export const LoginForm: FC<LoginFormProps> = ({ setStep }) => {
 					const node = otpInput.current;
 					node?.focus();
 				})
-				.catch((err):void => {
-					console.log(err);
+				.catch((error): void => {
+					getErrorMessage(error);
 				});
 		}
 	};

@@ -16,7 +16,7 @@ import style from "./CreateVisitPage.module.css";
 
 export const CreateVisitPage: FC = () => {
 	const { Step } = Steps;
-	const [currentStep, setCurrentStep] = useState<number>(0);
+	const [currentStep, setCurrentStep] = useState<number>(1);
 	const setStep = (step: number) => {
 		setCurrentStep(step);
 	};

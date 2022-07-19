@@ -1,4 +1,4 @@
-import { DatePicker} from "antd";
+import { DatePicker } from "antd";
 import classNames from "classnames";
 import { FC, useEffect, useState } from "react";
 
@@ -38,8 +38,9 @@ export const Calendar: FC<CalendarProps> = ({ setStep }) => {
 	// Exclude weekends and past dates from available time slots
 	const disabledDate: RangePickerProps["disabledDate"] = (current) => {
 		return (
-			(current && current.toDate().getDay() === 0) ||
-			current.toDate().getDay() === 6
+			current.toDate().getDay() === 0 ||
+			current.toDate().getDay() === 6 ||
+			current.toDate().getTime() < new Date().getTime()
 		);
 	};
 
